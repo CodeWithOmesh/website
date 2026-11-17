@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Code with Omesh · Websites, templates &amp; web design e-books</title>
+<meta name="description" content="Websites for small businesses, ready-made website templates from $12, and a beginner-friendly e-book that teaches you to build your own. By Omesh.">
+<link rel="canonical" href="https://codewithomesh.com/">
+<meta name="theme-color" content="#0E0E10">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Code with Omesh">
+<meta property="og:url" content="https://codewithomesh.com/">
+<meta property="og:title" content="Code with Omesh · Websites that bring your ideas to light">
+<meta property="og:description" content="Websites for small businesses, ready-made templates from $12, and an e-book that teaches you to build your own.">
+<meta property="og:image" content="https://codewithomesh.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Code with Omesh","url":"https://codewithomesh.com/","logo":"https://codewithomesh.com/assets/apple-touch-icon-180.png","email":"codewithomesh@gmail.com","sameAs":["https://www.facebook.com/CodeWithOmesh","https://www.youtube.com/@CodeWithOmesh","https://github.com/CodeWithOmesh"]}
+</script>
+<style>
+  :root {
+    --bg: #0E0E10; --bg2: #151518; --card: #1A1A1F; --line: #2A2A31;
+    --ink: #F6F3EE; --muted: #A9A49C; --amber: #FFB547; --deep: #F2A93B; --cream: #FFF4DC;
+    --display: "Outfit", system-ui, sans-serif; --sans: "Inter", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--ink); font: 400 1rem/1.65 var(--sans); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  a { color: inherit; }
+  img { display: block; max-width: 100%; height: auto; }
+  .wrap { width: min(1160px, 100% - 40px); margin-inline: auto; }
+  h1, h2, h3 { font-family: var(--display); line-height: 1.08; letter-spacing: -.02em; }
+  h2 { font-size: clamp(2rem, 4.6vw, 3.1rem); font-weight: 800; }
+  .eyebrow { font: 600 .78rem var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--amber); margin-bottom: 14px; }
+  .lead { color: var(--muted); font-size: 1.08rem; max-width: 600px; margin-top: 16px; }
+  .amber { color: var(--amber); }
+  section { padding: 110px 0; overflow-x: clip; }
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 24px; border-radius: 40px; font: 600 .98rem var(--sans); text-decoration: none; border: 1.5px solid transparent; transition: transform .2s, background .2s, border-color .2s; cursor: pointer; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn.primary { background: var(--amber); color: #16120C; }
+  .btn.primary:hover { background: #FFC46C; }
+  .btn.ghost { border-color: var(--line); color: var(--ink); }
+  .btn.ghost:hover { border-color: var(--amber); }
+  .btn.wa { background: #25D366; color: #06210F; }
+  .btn svg { width: 18px; height: 18px; flex: none; }
+
+  /* nav */
+  header.nav { position: sticky; top: 0; z-index: 50; background: rgba(14,14,16,.82); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid transparent; transition: border-color .3s; }
+  header.nav.scrolled { border-color: var(--line); }
+  .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 20px; }
+  .brand { display: flex; align-items: center; gap: 10px; font: 800 1.12rem var(--display); text-decoration: none; letter-spacing: -.01em; white-space: nowrap; }
+  .brand img { width: 36px; height: 36px; border-radius: 9px; }
+  .nav ul { display: flex; gap: 30px; list-style: none; padding: 0; }
+  .nav ul a { text-decoration: none; color: var(--muted); font-weight: 500; font-size: .95rem; transition: color .2s; }
+  .nav ul a:hover { color: var(--ink); }
+  .nav .btn { padding: 10px 18px; font-size: .9rem; }
+  .burger { display: none; background: none; border: 1px solid var(--line); color: var(--ink); width: 44px; height: 44px; border-radius: 12px; font-size: 1.2rem; cursor: pointer; }
+
+  /* hero */
+  .hero { padding: 70px 0 90px; position: relative; }
+  .hero .wrap { display: grid; grid-template-columns: 1.05fr .95fr; gap: 40px; align-items: center; }
+  .hero h1 { font-size: clamp(2.7rem, 6.6vw, 5rem); font-weight: 800; }
+  .hero .lead { font-size: 1.15rem; }
+  .hero .actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 34px; }
+  .hero .chips { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 34px; }
+  .chip { border: 1px solid var(--line); padding: 7px 14px; border-radius: 30px; font-size: .85rem; color: var(--muted); }
+  .lamp { position: relative; width: 100%; max-width: 500px; margin-inline: auto; aspect-ratio: 1; }
+  .lamp svg { width: 100%; height: 100%; overflow: visible; }
+  .lamp .beam { transform-origin: 400px 244px; animation: glow 5s ease-in-out infinite; }
+  @keyframes glow { 0%, 100% { opacity: .92; } 50% { opacity: 1; } 52% { opacity: .78; } 54% { opacity: 1; } }
+
+  /* cards & grids */
+  .grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 50px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 30px; }
+  .card h3 { font-size: 1.3rem; margin: 18px 0 8px; }
+  .card p { color: var(--muted); font-size: .96rem; }
+  .ic { width: 50px; height: 50px; border-radius: 14px; display: grid; place-items: center; background: rgba(255,181,71,.12); color: var(--amber); font-size: 1.4rem; }
+  .steps { counter-reset: s; }
+  .steps .card h3::before { counter-increment: s; content: "0" counter(s); display: block; font: 700 .85rem "JetBrains Mono", monospace; color: var(--amber); margin-bottom: 10px; }
+  .split { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; flex-wrap: wrap; }
+  .alt { background: var(--bg2); border-block: 1px solid var(--line); }
+
+  /* templates */
+  .tpl { background: var(--card); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; transition: transform .35s, border-color .3s; }
+  .tpl:hover { transform: translateY(-6px); border-color: #3a3a44; }
+  .tpl img { aspect-ratio: 16/9; width: 100%; object-fit: cover; }
+  .tpl .body { padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
+  .tpl h3 { font-size: 1.15rem; }
+  .tpl p { color: var(--muted); font-size: .9rem; }
+  .tpl .row { display: flex; gap: 10px; margin-top: auto; padding-top: 16px; }
+  .tpl .row a { flex: 1; justify-content: center; padding: 11px 14px; font-size: .88rem; }
+
+  /* book */
+  .book { display: grid; grid-template-columns: .8fr 1.2fr; gap: 60px; align-items: center; }
+  .book .cover { position: relative; max-width: 380px; margin-inline: auto; }
+  .book .cover img { border-radius: 10px; box-shadow: 0 40px 80px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.06); transform: rotate(-3deg); transition: transform .4s; }
+  .book .cover:hover img { transform: rotate(0); }
+  .book .cover::before { content: ""; position: absolute; inset: -12% 0 10%; background: radial-gradient(circle at 50% 30%, rgba(255,181,71,.28), transparent 65%); z-index: -1; }
+  .book ul { list-style: none; padding: 0; margin: 24px 0 30px; display: grid; gap: 10px; }
+  .book li { display: flex; gap: 12px; color: var(--muted); }
+  .book li::before { content: "✓"; color: var(--amber); font-weight: 700; }
+  .price { font: 800 2.2rem var(--display); }
+  .price small { font: 500 .95rem var(--sans); color: var(--muted); margin-left: 8px; }
+
+  /* about */
+  .about { display: grid; grid-template-columns: auto 1fr; gap: 50px; align-items: center; }
+  .about .badge { width: 200px; height: 200px; border-radius: 40px; background: var(--card); border: 1px solid var(--line); display: grid; place-items: center; }
+  .about .badge img { width: 130px; height: 130px; border-radius: 28px; }
+  .about p { color: var(--muted); margin-top: 14px; max-width: 680px; }
+
+  /* contact */
+  .contact { text-align: center; background: radial-gradient(ellipse at 50% 0%, rgba(255,181,71,.16), transparent 60%), var(--bg2); border-top: 1px solid var(--line); }
+  .contact .lead { margin-inline: auto; }
+  .contact .actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 34px; }
+  .socials { display: flex; gap: 12px; justify-content: center; margin-top: 30px; flex-wrap: wrap; }
+  .socials a { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border: 1px solid var(--line); border-radius: 30px; text-decoration: none; color: var(--muted); font-size: .9rem; transition: color .2s, border-color .2s; }
+  .socials a:hover { color: var(--ink); border-color: var(--amber); }
+  .socials svg { width: 17px; height: 17px; }
+  footer { border-top: 1px solid var(--line); padding: 30px 0; color: var(--muted); font-size: .88rem; }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  footer a { text-decoration: none; } footer a:hover { color: var(--ink); }
+
+  .fab { position: fixed; right: 20px; bottom: 20px; z-index: 60; width: 58px; height: 58px; border-radius: 50%; background: #25D366; display: grid; place-items: center; box-shadow: 0 12px 30px rgba(37,211,102,.35); transition: transform .2s; }
+  .fab:hover { transform: scale(1.07); }
+  .fab svg { width: 30px; height: 30px; }
+
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s, transform .8s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+
+  @media (max-width: 960px) {
+    .hero .wrap, .book { grid-template-columns: 1fr; }
+    .hero { padding-top: 30px; }
+    .lamp { max-width: 340px; order: -1; margin-bottom: -30px; }
+    .grid3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .about { grid-template-columns: 1fr; text-align: center; } .about .badge { margin-inline: auto; } .about p { margin-inline: auto; }
+  }
+  @media (max-width: 760px) {
+    .nav ul, .nav .btn { display: none; }
+    .burger { display: block; }
+    .nav.open ul { display: flex; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--line); padding: 10px 20px 22px; gap: 0; }
+    .nav.open ul a { display: block; padding: 14px 0; font-size: 1.1rem; color: var(--ink); border-bottom: 1px solid var(--line); }
+    section { padding: 80px 0; }
+    .grid3 { grid-template-columns: 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } .lamp .beam { animation: none; } html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="assets/logo-icon.svg" alt="" width="36" height="36">Code with <span class="amber">Omesh</span></a>
+    <ul id="menu">
+      <li><a href="#websites">Websites</a></li>
+      <li><a href="#templates">Templates</a></li>
+      <li><a href="#ebook">E-book</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn primary" href="https://wa.me/94707002554?text=Hi%20Omesh!%20I'd%20like%20a%20website." target="_blank" rel="noopener">Get a website</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Websites · Templates · Learning</div>
+      <h1>Websites that bring your ideas <span class="amber">to light.</span></h1>
+      <p class="lead">I build modern, mobile-friendly websites for small businesses, sell ready-made templates you can launch yourself, and teach beginners to build their own.</p>
+      <div class="actions">
+        <a class="btn primary" href="#websites">Get a website for your business</a>
+        <a class="btn ghost" href="https://templates.codewithomesh.com/" target="_blank" rel="noopener">See 25 live demos →</a>
+      </div>
+      <div class="chips"><span class="chip">📱 Mobile-friendly</span><span class="chip">💬 WhatsApp bookings</span><span class="chip">⚡ Fast &amp; simple</span></div>
+    </div>
+    <div class="lamp" aria-hidden="true">
+      <svg viewBox="0 0 800 800">
+        <defs>
+          <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFB547" stop-opacity=".62"/><stop offset=".6" stop-color="#F2A93B" stop-opacity=".22"/><stop offset="1" stop-color="#F2A93B" stop-opacity="0"/></linearGradient>
+          <linearGradient id="shade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34343A"/><stop offset="1" stop-color="#151518"/></linearGradient>
+          <radialGradient id="glowg"><stop offset="0" stop-color="#FFF4DC" stop-opacity=".75"/><stop offset="1" stop-color="#FFB547" stop-opacity="0"/></radialGradient>
+          <filter id="soft" x="-30%" y="-10%" width="160%" height="130%"><feGaussianBlur stdDeviation="14"/></filter>
+        </defs>
+        <g class="beam"><path d="M306 244 L494 244 L650 700 L150 700 Z" fill="url(#beam)" filter="url(#soft)"/><circle cx="400" cy="246" r="62" fill="url(#glowg)"/></g>
+        <line x1="400" y1="-200" x2="400" y2="134" stroke="#F2A93B" stroke-width="5"/>
+        <path d="M298 236 A102 106 0 0 1 502 236 Z" fill="url(#shade)"/>
+        <path d="M330 196 A78 80 0 0 1 384 152" fill="none" stroke="#fff" stroke-opacity=".2" stroke-width="7" stroke-linecap="round"/>
+        <ellipse cx="400" cy="238" rx="104" ry="17" fill="#F2A93B"/><ellipse cx="400" cy="236" rx="92" ry="11" fill="#FFD27A"/>
+        <circle cx="400" cy="246" r="15" fill="#FFF4DC"/>
+        <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M244 455 L174 500 L244 545" stroke="#fff" stroke-width="26"/><circle cx="353" cy="500" r="59" stroke="#fff" stroke-width="32"/>
+          <path d="M468 570 L516 430" stroke="#FFB547" stroke-width="26"/><path d="M556 455 L626 500 L556 545" stroke="#fff" stroke-width="26"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="websites">
+  <div class="wrap">
+    <div class="eyebrow">For businesses</div>
+    <h2>A website that brings you <span class="amber">customers.</span></h2>
+    <p class="lead">Cafés, salons, clinics, hotels, gyms and more. Your customers can book, order and message you on WhatsApp straight from your website.</p>
+    <div class="grid3 steps">
+      <div class="card reveal"><h3>Pick a design</h3><p>Browse 25 live demo websites and choose the one that feels like your business. We can change colours, sections and words.</p></div>
+      <div class="card reveal" style="transition-delay:.1s"><h3>Send your details</h3><p>Share your logo, photos, prices, opening hours and WhatsApp number. I put everything in place for you.</p></div>
+      <div class="card reveal" style="transition-delay:.2s"><h3>Go live</h3><p>Your website goes online at your own address, works on every phone, and you can ask for changes any time.</p></div>
+    </div>
+    <div class="actions" style="display:flex;gap:14px;flex-wrap:wrap;margin-top:40px">
+      <a class="btn wa" href="https://wa.me/94707002554?text=Hi%20Omesh!%20I'd%20like%20a%20website%20for%20my%20business." target="_blank" rel="noopener"><svg viewBox="0 0 32 32"><path fill="currentColor" d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.4.7 4.7 1.9 6.7L3 29l6.9-2.2c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm0 23.2c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.3 1.3-4-.3-.4a10.4 10.4 0 0 1-1.6-5.6C5.5 9.9 10.2 5.3 16 5.3s10.5 4.6 10.5 10.4S21.8 26.2 16 26.2zm5.8-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.7 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>Chat on WhatsApp</a>
+      <a class="btn ghost" href="https://templates.codewithomesh.com/?client" target="_blank" rel="noopener">Browse the designs →</a>
+    </div>
+  </div>
+</section>
+
+<section id="templates">
+  <div class="wrap">
+    <div class="split">
+      <div><div class="eyebrow">Website templates</div><h2>Do it yourself, <span class="amber">from $12.</span></h2>
+        <p class="lead">Ready-made websites you can edit and publish for free in about 30 minutes. No coding needed, with a step-by-step guide included.</p></div>
+      <a class="btn ghost" href="https://codewithomesh.gumroad.com/" target="_blank" rel="noopener">All templates →</a>
+    </div>
+    <div class="grid3" id="tplGrid"></div>
+  </div>
+</section>
+
+<section class="alt" id="ebook">
+  <div class="wrap book">
+    <div class="cover reveal"><img src="assets/ebook-cover.jpg" alt="Build Your First Website e-book cover" width="560" height="792" loading="lazy"></div>
+    <div class="reveal">
+      <div class="eyebrow">E-book · 66 pages</div>
+      <h2>Build Your <span class="amber">First Website</span></h2>
+      <p class="lead">HTML &amp; CSS for absolute beginners. Go from an empty folder to a real, mobile-friendly website, published online for free.</p>
+      <ul>
+        <li>No experience needed, explained in plain English</li>
+        <li>Build a real 4-page café website, step by step</li>
+        <li>Mobile-friendly design, WhatsApp buttons and contact forms</li>
+        <li>Publish it online free with Netlify</li>
+        <li>Finished project code included</li>
+      </ul>
+      <div class="split" style="align-items:center;justify-content:flex-start">
+        <div class="price">$14<small>one-time · PDF</small></div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn primary" href="https://codewithomesh.gumroad.com/l/build-your-first-website" target="_blank" rel="noopener">Get the e-book</a>
+          <a class="btn ghost" href="https://codewithomesh.gumroad.com/l/build-your-first-website-free-sample" target="_blank" rel="noopener">Free sample</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <div class="badge reveal"><img src="assets/apple-touch-icon-180.png" alt="Code with Omesh logo" width="130" height="130"></div>
+    <div class="reveal">
+      <div class="eyebrow">About</div>
+      <h2>Hi, I'm <span class="amber">Omesh.</span></h2>
+      <p>I build websites for small businesses and create ready-made website templates that anyone can launch. I believe every business deserves a website that looks great on a phone and makes it easy for customers to get in touch.</p>
+      <p>I also teach. My e-book <em>Build Your First Website</em> is the guide I wish I'd had when I started: plain English, real projects, no fluff. The lamp in my logo is the idea behind everything I do: bringing your ideas to light with code.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Contact</div>
+    <h2>Let's build <span class="amber">something.</span></h2>
+    <p class="lead">Tell me about your business or your idea. The fastest way to reach me is WhatsApp.</p>
+    <div class="actions">
+      <a class="btn wa" href="https://wa.me/94707002554?text=Hi%20Omesh!" target="_blank" rel="noopener"><svg viewBox="0 0 32 32"><path fill="currentColor" d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.4.7 4.7 1.9 6.7L3 29l6.9-2.2c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm0 23.2c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.3 1.3-4-.3-.4a10.4 10.4 0 0 1-1.6-5.6C5.5 9.9 10.2 5.3 16 5.3s10.5 4.6 10.5 10.4S21.8 26.2 16 26.2z"/></svg>WhatsApp 070 700 2554</a>
+      <a class="btn ghost" href="mailto:codewithomesh@gmail.com">✉ codewithomesh@gmail.com</a>
+    </div>
+    <div class="socials">
+      <a href="https://www.facebook.com/CodeWithOmesh" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v9h4v-9h3l.5-4h-3.5V8.8c0-.5.3-.8.8-.8z"/></svg>Facebook</a>
+      <a href="https://www.youtube.com/@CodeWithOmesh" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.8 15V9l5.7 3-5.7 3z"/></svg>YouTube</a>
+      <a href="https://github.com/CodeWithOmesh" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.7.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>GitHub</a>
+      <a href="https://codewithomesh.github.io" target="_blank" rel="noopener">🌐 More demos</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Code with Omesh · codewithomesh.com</span>
+    <span><a href="https://templates.codewithomesh.com/">Demos</a> · <a href="https://codewithomesh.gumroad.com/">Shop</a> · <a href="mailto:codewithomesh@gmail.com">Email</a></span>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/94707002554?text=Hi%20Omesh!" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path fill="#fff" d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.4.7 4.7 1.9 6.7L3 29l6.9-2.2c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm0 23.2c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.3 1.3-4-.3-.4a10.4 10.4 0 0 1-1.6-5.6C5.5 9.9 10.2 5.3 16 5.3s10.5 4.6 10.5 10.4S21.8 26.2 16 26.2zm5.8-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.7 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg></a>
+
+<script>
+  // Templates on sale (add a line when a new one goes live on Gumroad)
+  const SHOP = 'https://codewithomesh.gumroad.com/l/', DEMO = 'https://templates.codewithomesh.com/';
+  const templates = [
+    ['green-ritual', 'juice-bar', 'Green Ritual', 'Juice bar & café'],
+    ['palm-haven', 'hotel', 'Palm Haven Retreat', 'Boutique hotel & resort'],
+    ['loudmouth', 'agency', 'Loudmouth Studio', 'Marketing & creative agency'],
+    ['nexacore', 'tech', 'Nexacore', 'IT & software company'],
+    ['slice-republic', 'pizza', 'Slice Republic', 'Pizza & fast food'],
+    ['ember-and-oak', 'restaurant', 'Ember & Oak', 'Restaurant & fine dining'],
+  ];
+  document.getElementById('tplGrid').innerHTML = templates.map(([slug, demo, name, kind], i) => `
+    <article class="tpl reveal" style="transition-delay:${(i % 3) * .08}s">
+      <img src="assets/tpl-${slug}.jpg" alt="${name} website template preview" width="800" height="450" loading="lazy">
+      <div class="body"><h3>${name}</h3><p>${kind} · $12</p>
+        <div class="row"><a class="btn ghost" href="${DEMO}${demo}/" target="_blank" rel="noopener">Live demo</a><a class="btn primary" href="${SHOP}${slug}" target="_blank" rel="noopener">Buy</a></div></div>
+    </article>`).join('');
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const nav = document.getElementById('nav'), burger = document.getElementById('burger');
+  addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 10), { passive: true });
+  burger.onclick = () => { const o = nav.classList.toggle('open'); burger.setAttribute('aria-expanded', o); burger.textContent = o ? '✕' : '☰'; };
+  document.querySelectorAll('#menu a').forEach(a => a.onclick = () => { nav.classList.remove('open'); burger.setAttribute('aria-expanded', false); burger.textContent = '☰'; });
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
