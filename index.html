@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Code with Omesh · Websites, templates &amp; web design e-books</title>
-<meta name="description" content="Websites for small businesses, ready-made website templates from $12, and a beginner-friendly e-book that teaches you to build your own. By Omesh.">
+<meta name="description" content="Websites for small businesses, ready-made website templates from $12, and a beginner-friendly e-book and cheat sheets that teach you to build your own. By Omesh.">
 <link rel="canonical" href="https://codewithomesh.com/">
 <meta name="theme-color" content="#0E0E10">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -110,6 +110,21 @@
   .price { font: 800 2.2rem var(--display); }
   .price small { font: 500 .95rem var(--sans); color: var(--muted); margin-left: 8px; }
 
+  /* learn: e-book (amber) + cheat sheets (teal) */
+  .learn-head { text-align: center; margin-bottom: 70px; }
+  .learn-head .lead { margin-inline: auto; }
+  .book + .book { margin-top: 110px; }
+  .book.flip .cover { order: 2; }
+  .teal { color: #2EC4B6; white-space: nowrap; }
+  .book.sheets .eyebrow { color: #2EC4B6; }
+  .book.sheets li::before { color: #2EC4B6; }
+  .book.sheets .cover::before { background: radial-gradient(circle at 50% 30%, rgba(46,196,182,.24), transparent 65%); }
+  .book.sheets .btn.primary { background: #2EC4B6; color: #06201D; }
+  .book.sheets .btn.primary:hover { background: #4FD3C7; }
+  .book.sheets .btn.ghost:hover { border-color: #2EC4B6; }
+  .buy-row { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .buy-row .btns { display: flex; gap: 12px; flex-wrap: wrap; }
+
   /* about */
   .about { display: grid; grid-template-columns: auto 1fr; gap: 50px; align-items: center; }
   .about .badge { width: 200px; height: 200px; border-radius: 40px; background: var(--card); border: 1px solid var(--line); display: grid; place-items: center; }
@@ -137,6 +152,8 @@
 
   @media (max-width: 960px) {
     .hero .wrap, .book { grid-template-columns: 1fr; }
+    .book.flip .cover { order: 0; }
+    .book + .book { margin-top: 80px; }
     .hero { padding-top: 30px; }
     .lamp { max-width: 340px; order: -1; margin-bottom: -30px; }
     .grid3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -161,7 +178,7 @@
     <ul id="menu">
       <li><a href="#websites">Websites</a></li>
       <li><a href="#templates">Templates</a></li>
-      <li><a href="#ebook">E-book</a></li>
+      <li><a href="#learn">Learn</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -234,8 +251,16 @@
   </div>
 </section>
 
-<section class="alt" id="ebook">
-  <div class="wrap book">
+<section class="alt" id="learn">
+  <div class="wrap">
+    <div class="learn-head reveal">
+      <div class="eyebrow">Learn web design</div>
+      <h2>Build it <span class="amber">yourself.</span></h2>
+      <p class="lead">A step-by-step e-book for complete beginners, and cheat sheets to keep next to your keyboard. Both use the same friendly examples.</p>
+    </div>
+  </div>
+
+  <div class="wrap book" id="ebook">
     <div class="cover reveal"><img src="assets/ebook-cover.jpg" alt="Build Your First Website e-book cover" width="560" height="792" loading="lazy"></div>
     <div class="reveal">
       <div class="eyebrow">E-book · 66 pages</div>
@@ -248,11 +273,34 @@
         <li>Publish it online free with Netlify</li>
         <li>Finished project code included</li>
       </ul>
-      <div class="split" style="align-items:center;justify-content:flex-start">
+      <div class="buy-row">
         <div class="price">$14<small>one-time · PDF</small></div>
-        <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <div class="btns">
           <a class="btn primary" href="https://codewithomesh.gumroad.com/l/build-your-first-website" target="_blank" rel="noopener">Get the e-book</a>
           <a class="btn ghost" href="https://codewithomesh.gumroad.com/l/build-your-first-website-free-sample" target="_blank" rel="noopener">Free sample</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap book sheets flip" id="cheat-sheets">
+    <div class="cover reveal"><img src="assets/cheatsheets-cover.jpg" alt="Web Dev Cheat Sheets cover" width="560" height="792" loading="lazy"></div>
+    <div class="reveal">
+      <div class="eyebrow">10 cheat sheets · light &amp; dark</div>
+      <h2>Web Dev <span class="teal">Cheat Sheets</span></h2>
+      <p class="lead">Everything you look up again and again, one page per topic. Print them, or keep them open on screen while you code.</p>
+      <ul>
+        <li>HTML, CSS, Flexbox &amp; Grid and responsive design</li>
+        <li>JavaScript basics and Git &amp; GitHub</li>
+        <li>HTML tags and CSS properties A–Z</li>
+        <li>Colour palettes, font pairs and a website launch checklist</li>
+        <li>Light edition for printing, dark edition for screens</li>
+      </ul>
+      <div class="buy-row">
+        <div class="price">$12<small>one-time · PDF</small></div>
+        <div class="btns">
+          <a class="btn primary" href="https://codewithomesh.gumroad.com/l/web-dev-cheat-sheets" target="_blank" rel="noopener">Get the cheat sheets</a>
+          <a class="btn ghost" href="https://codewithomesh.gumroad.com/l/web-dev-cheat-sheets-free" target="_blank" rel="noopener">Free sample</a>
         </div>
       </div>
     </div>
@@ -293,7 +341,7 @@
 <footer>
   <div class="wrap">
     <span>© <span id="yr">2026</span> Code with Omesh · codewithomesh.com</span>
-    <span><a href="https://templates.codewithomesh.com/">Demos</a> · <a href="https://codewithomesh.gumroad.com/">Shop</a> · <a href="mailto:codewithomesh@gmail.com">Email</a></span>
+    <span><a href="https://templates.codewithomesh.com/">Demos</a> · <a href="#ebook">E-book</a> · <a href="#cheat-sheets">Cheat sheets</a> · <a href="https://codewithomesh.gumroad.com/">Shop</a> · <a href="mailto:codewithomesh@gmail.com">Email</a></span>
   </div>
 </footer>
 
