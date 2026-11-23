@@ -12,3 +12,12 @@
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+# Free tools live in the CodeWithOmesh/tools repo (Netlify site: codewithomesh-tools).
+# Anything under /tools/ that isn't a file in this repo (e.g. /tools/qr-code-generator/)
+# is shown from that site, so visitors stay on codewithomesh.com. The /tools/ page
+# itself comes from tools/index.html in this repo. New tools need no change here.
+[[redirects]]
+  from = "/tools/*"
+  to = "https://codewithomesh-tools.netlify.app/tools/:splat"
+  status = 200
